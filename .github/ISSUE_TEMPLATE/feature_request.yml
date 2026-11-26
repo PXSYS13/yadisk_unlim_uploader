@@ -1,0 +1,12 @@
+name: Идея или улучшение
+description: Предложить новую функцию или улучшение интерфейса
+title: "[Идея]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Что хотелось бы улучшить?
+      description: Опишите задачу, которую вы решаете, и как программа могла бы помочь.
+    validations:
+      required: true

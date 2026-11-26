@@ -1,0 +1,62 @@
+name: Сообщить об ошибке
+description: Рассказать о сбое или проблеме при загрузке фото и видео в Безлимит
+title: "[Баг]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что тестируете программу!
+        **Важно:** никогда не прикладывайте файл `cookies.json` или `.env` — в них ваш доступ к аккаунту.
+        Вместо этого нажмите в интерфейсе **«Отчёт для поддержки»** — скачается безопасный ZIP-архив `yadisk-unlim-logs-*.zip`, в котором все секреты и пути уже вырезаны.
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Операционная система
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Linux
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия программы
+      description: Указана в правом верхнем углу окна программы (например, v1.0.0)
+      placeholder: v1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: subscription
+    attributes:
+      label: Есть ли активная подписка Яндекс 360 с безлимитом?
+      options:
+        - Да, активная подписка Яндекс 360
+        - Нет / подписка закончилась
+        - Не уверен(а)
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Что вы делали и что пошло не так?
+      description: Опишите шаги, какие файлы загружались (фото/видео, примерный размер) и какое сообщение показала программа.
+      placeholder: |
+        1. Запустил(а) webui.bat
+        2. Вставил(а) cookies и выбрал(а) папку с видео MOV по 1.5 ГБ
+        3. Нажал(а) «Загрузить в Безлимит», появилась ошибка...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Архив «Отчёт для поддержки» или скриншот
+      description: Перетащите сюда файл yadisk-unlim-logs-*.zip (скачивается по ссылке «Отчёт для поддержки» в интерфейсе) или скриншот окна.

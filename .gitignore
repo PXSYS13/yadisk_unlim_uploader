@@ -1,0 +1,72 @@
+# Локальные данные и секреты (НИКОГДА не коммитим)
+.env
+.env.*
+!.env.example
+cookies.json
+cookies*.json
+cookies.json.tmp*
+
+# uv.exe, который webui.bat скачивает в папку программы
+.uv/
+
+# База состояния очереди SQLite
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Логи, диагностические архивы и временные файлы
+logs/
+*.log
+*.part
+*.zip
+*.bak
+*.tmp
+support-info.json
+yadisk-unlim-logs-*.zip
+
+# Черновики постов и заметки инструментов разработки
+TELEGRAM_POST*.md
+posts/
+CLAUDE.md
+AGENTS.md
+.claude/
+.cursor*
+PLAN*.md
+NOTES*
+TODO*
+*.local.md
+/debug_*.py
+/diag_*.py
+/scratch*
+
+# Python кеш и покрытие
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# IDE и ОС
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Сборки
+build/
+dist/
+*.egg-info/
